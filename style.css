@@ -17,35 +17,23 @@ body {
     grid-template-columns: 1fr;
 }
 
-#top-nav ul {
-    color: #FCD0A1;
-    list-style: none;
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-li {
-    font-weight: 300;
-    font-size: 2rem;
-    float: right;
-    padding: 1vw;
-}
-#about-me {
+#header-container {
     display: grid;
     width: 100%;
     justify-content: center;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 1fr;
-    background: linear-gradient(0deg,#4464AD 50%,  #343330 50%);
 }
 
 #header {
+    position: fixed;
+    top:0;
     margin-bottom: 150px;
     width: 100%;
     justify-self: center;
     grid-row: 1/2;
     grid-column: 2/3;
-    z-index: 2;
+    z-index: 1;
 }
 
 h1 {
@@ -60,39 +48,76 @@ h2 {
 }
 .title {
     text-align: center;
-    margin-bottom: -15vh;
 }
 #header-wave {
     grid-row: 1/2;
     grid-column: 1/4;
-    z-index: 1;
-    margin-bottom: 100px;
+    z-index: 2;
 }
 
 #projects,
 #contact {
+    margin-top: -100px;
     color: #FCD0A1;
     height: 50vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
-div.action-box {
+div.contact-box {
     box-shadow: 2px 9px 14px 7px rgba(0,0,0,0.68);
-    background:  #343330;
+    background: rgba(52, 51, 48, 0.7);
+    height: 100px;
+    width: 100px;
     border: solid #343330 1px;
+    transition: all .4s ease-in-out;
 }
-.project-box:hover {
+div.contact-box:hover {
+    background:  rgba(52, 51, 48, 1);
+    height: 150px;
+    width: 150px;
+}
+div.project-box {
+    box-shadow: 2px 9px 14px 7px rgba(0,0,0,0.68);
+    background:  rgba(52, 51, 48, 0.7);
+    border-radius: 40px 40px 40px 40px;
+    height: 100px;
+    width: 200px;
+    border: solid #343330 1px;
+    transition: all .3s ease-out;
+    text-align: center;
+}
+div.project-box:hover {
     cursor: pointer;
+    height: 200px;
+    background:  rgba(52, 51, 48, 1) !important;
 }
-
+.project-image {
+    transition: all .3s ease-out;
+}
+.project-image {
+    height: 50px;
+    width: 50px;
+}
+div.project-box:hover .project-image {
+    height: 75px;
+    width: 75px;
+}
+.project-button {
+    display: none;
+    margin-top: 20px;
+}
+.project-button-active {
+    display: inline;
+}
 #background-gradient {
     background: rgb(68,100,173);
     background: -moz-linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
     background: linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4464ad",endColorstr="#a1c6ea",GradientType=1);
+    z-index: 2;
 }
 footer {
     text-align: center;
@@ -100,4 +125,7 @@ footer {
 a {
     text-decoration: none;
     color: #343330;
+}
+span {
+    text-align: center;
 }

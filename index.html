@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    
     <div class="grid">       
         <div id="header-container">
             <div id="header">
@@ -18,11 +19,14 @@
             <div class="header-fill"></div>
         </div>
         <div id="background-gradient">
-            <div class="title">
-                <h2>About me</h2>
-            </div>
             <div class="about-me">
-                about me stuff
+                <div class="title">
+                    <h2>About me</h2>
+                </div>
+                <div id="about-me">
+                    <img id="about-me-img" src="about-me.png" alt="Photo of the author"/>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis facilis fugiat asperiores, vero adipisci suscipit distinctio sunt ipsum nulla minus iste blanditiis error architecto cum similique consectetur quibusdam repudiandae accusamus?</p>
+                </div>
             </div>
             <div class="title">
                 <h2>My projects</h2>
@@ -51,14 +55,16 @@
                 <h2>Contact me</h2>
             </div>
             <div id="contact">
-                <div class="contact-box">Contact 1</div>
-                <div class="contact-box">Contact 2</div>
-                <div class="contact-box">Contact 3</div>
+                <div class="project-box">Contact 1</div>
+                <div class="project-box">Contact 2</div>
+                <div class="project-box">Contact 3</div>
             </div>
             <footer>
                 <p class="love"><a href="https://github.com/marelons1337">Made with <i class="icon ion-heart" style="color: red;"></i> by Rafal</a></p>
             </footer>
         </div>
+        <canvas class="background"></canvas>
         <script src="script.js"></script>
+        <script src="node_modules/particlesjs/dist/particles.min.js"></script>
     </body>
 </html>

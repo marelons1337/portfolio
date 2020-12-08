@@ -6,7 +6,6 @@ color: #FCD0A1;
 }
 html{
     font-family: 'Ubuntu', sans-serif;
-    /* background: url("bg1.jpg") ; */
 }
 body {
     width: 100%;
@@ -59,7 +58,9 @@ h2 {
 }
 .title {
     text-align: center;
+    margin-top: 10vh;
     margin-bottom: 10vh;
+    width: 100%;
 }
 #header-wave {
     grid-row: 1/2;
@@ -67,7 +68,6 @@ h2 {
     z-index: 2;
 }
 
-#projects,
 #contact {
     color: #FCD0A1;
     height: 50vh;
@@ -144,7 +144,7 @@ div.project-box:hover .project-image {
     display: none;
     margin-top: 20px;
 }
-.project-button-active {
+div.project-box:hover .project-button {
     display: inline;
 }
 #background-gradient {
@@ -154,9 +154,15 @@ div.project-box:hover .project-image {
     background: linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4464ad",endColorstr="#a1c6ea",GradientType=1);
     z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
+
 footer {
-    margin-top: 200px;
+    margin-top: 50px;
+    width: 100%;
     text-align: center;
 }
 a {

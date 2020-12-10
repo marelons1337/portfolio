@@ -116,9 +116,9 @@ h2 {
     background:  rgba(52, 51, 48, 1) !important;
 }
 .project-image {
-    -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.55);
-    -moz-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.55);
-    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.55);
+    -webkit-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
+    -moz-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
+    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
     min-height: 80vh;
     width: 100vw;
     background-attachment: fixed;

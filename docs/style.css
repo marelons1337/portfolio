@@ -142,15 +142,15 @@ h2 {
 }
 
 #anna-beauty {
-    background-image: url("anna-beauty.PNG");
+    background-image: url("./images/anna-beauty.PNG");
     z-index: 4;
 }
 #background-generator {
-    background-image: url("background-generator.PNG");
+    background-image: url("./images/background-generator.PNG");
     z-index: 5;
 }
 #robofriends {
-    background-image: url("robofriends.PNG");
+    background-image: url("./images/robofriends.PNG");
     z-index: 6;
 }
 

@@ -1,3 +1,26 @@
+
+let titles = document.querySelectorAll('.title')
+let buttons = document.querySelectorAll('button')
+let ps = document.querySelectorAll('p')
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('come-in')
+      observer.unobserve(entry.target);
+    }
+  });
+}), {threshold:0};
+
+let array = [titles, buttons, ps]
+
+array.forEach (arr => {
+  arr.forEach(el => {
+    observer.observe(el);
+  })
+});
+
+
+//particlesjs options
 window.onload = function() {
   Particles.init
   ({

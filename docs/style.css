@@ -202,7 +202,7 @@ span {
     text-align: center;
 }
 .come-in {
-    transform: translateY(120px);
+    transform: translateX(-120px);
     animation: come-in 1s ease-out forwards;
   }
   .come-in:nth-child(even) {

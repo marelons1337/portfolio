@@ -1,13 +1,23 @@
-var title = document.getElementById('title')
 
-var observer = new IntersectionObserver(function(entries) {
-	// isIntersecting is true when element and viewport are overlapping
-	// isIntersecting is false when element and viewport don't overlap
-	if(entries[0].isIntersecting === true)
-		console.log('Element has just become visible in screen');
-}, { threshold: [0] });
+let titles = document.querySelectorAll('.title')
+let buttons = document.querySelectorAll('button')
+let ps = document.querySelectorAll('p')
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('come-in')
+      observer.unobserve(entry.target);
+    }
+  });
+}), {threshold:0};
 
-observer.observe(title)
+let array = [titles, buttons, ps]
+
+array.forEach (arr => {
+  arr.forEach(el => {
+    observer.observe(el);
+  })
+});
 
 
 //particlesjs options

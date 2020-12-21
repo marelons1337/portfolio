@@ -115,18 +115,48 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-
 .project-button {
-    text-align: center;
-    height: 7vh;
-    width: 30vw;
-    background-color: #343330;
-    color: #FCD0A1;
-    letter-spacing: 3px;
-    margin-top: 40vh;
-    border-radius: 8px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
+	box-shadow:inset 0px 1px 0px 0px #a6827e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7d5d3b), color-stop(1, #634b30) );
+	background:-moz-linear-gradient( center top, #7d5d3b 5%, #634b30 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d5d3b', endColorstr='#634b30');
+	background-color:#7d5d3b;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+    text-indent:0;
+	border:1px solid #54381e;
+	display:inline-block;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+    height:50px;
+	line-height:50px;
+    width:140px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 1px 0px #4d3534;
+}.project-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #634b30), color-stop(1, #7d5d3b) );
+	background:-moz-linear-gradient( center top, #634b30 5%, #7d5d3b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#634b30', endColorstr='#7d5d3b');
+	background-color:#634b30;
+}.project-button:active {
+	position:relative;
+	top:1px;
 }
-
 #anna-beauty {
     background-image: url("./images/anna-beauty.PNG");
 }
@@ -173,7 +203,7 @@ span {
 }
 .come-in {
     transform: translateY(120px);
-    animation: come-in 0.8s ease forwards;
+    animation: come-in 1s ease-out forwards;
   }
   .come-in:nth-child(even) {
     animation-duration: 0.6s; /* So they look staggered */

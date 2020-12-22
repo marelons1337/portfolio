@@ -16,6 +16,19 @@ body {
     height: 100%;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:  #343330;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #A1C6EA;
+    border-radius: 1px;
+    border: 5px solid  #FCD0A1;
+  }
 .background {
     position: absolute;
     display: block;
@@ -100,21 +113,62 @@ h2 {
     max-width: 100%;
     height: auto;
 }
-
-.project-image {
-    -webkit-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    -moz-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    min-height: 80vh;
-    width: 100vw;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .parallax::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+  }
+  
+  .parallax::-webkit-scrollbar-track {
+    background:  #343330;        /* color of the tracking area */
+  }
+  
+  .parallax::-webkit-scrollbar-thumb {
+    background-color: #A1C6EA;    /* color of the scroll thumb */
+    border-radius: 1px;       /* roundness of the scroll thumb */
+    border: 5px solid  #4464AD;  /* creates padding around scroll thumb */
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+  .parallax__layer--fore{
+    transform: translateZ(1) scale(2);
+  }
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
+#anna-beauty {
+    background-image: url("./images/anna-beauty.PNG");
 }
+#background-generator {
+    background-image: url("./images/background-generator.PNG");
+}
+#robofriends {
+    background-image: url("./images/robofriends.PNG");
+}
+#placeholder-project {
+    background-image: url("./images/placeholder-projects.png");
+}
+
 .project-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
@@ -157,15 +211,7 @@ h2 {
 	position:relative;
 	top:1px;
 }
-#anna-beauty {
-    background-image: url("./images/anna-beauty.PNG");
-}
-#background-generator {
-    background-image: url("./images/background-generator.PNG");
-}
-#robofriends {
-    background-image: url("./images/robofriends.PNG");
-}
+
 #contact {
     color: #FCD0A1;
     height: 70vh;

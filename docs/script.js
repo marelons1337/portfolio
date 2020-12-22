@@ -5,7 +5,7 @@ let ps = document.querySelectorAll('p')
 observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('come-in')
+      entry.target.classList.add('animate__animated', 'animate__fadeInLeftBig')
       observer.unobserve(entry.target);
     }
   });

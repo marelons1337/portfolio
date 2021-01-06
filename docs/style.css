@@ -16,6 +16,19 @@ body {
     height: 100%;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:  #343330;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #A1C6EA;
+    border-radius: 1px;
+    border: 5px solid  #FCD0A1;
+  }
 .background {
     position: absolute;
     display: block;
@@ -26,8 +39,8 @@ body {
   }
 
 #header-container {
-    margin-top: 100px;
-    margin-bottom: -5px;
+    margin-bottom: 100px;
+    height: 100px;
     display: grid;
     width: 100%;
     justify-content: center;
@@ -36,22 +49,23 @@ body {
 }
 
 #header {
+    width: 100%;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 1;
 }
 
 #name-header {
-    margin-top: 50px;
+    width: 100%;
     text-align: center;
     font-size: 2em;
     color:#FCD0A1;
     font-weight: 400;
 }
 h2 {
-    color:#343330;
+    color: #FCD0A1;
     font-size: 1.7em;
     font-weight: 300;
 }
@@ -65,12 +79,8 @@ h2 {
     grid-column: 1/4;
     z-index: 2;
 }
-#background-gradient {
-    background: rgb(68,100,173);
-    background: -moz-linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
-    background: linear-gradient(180deg, rgba(68,100,173,1) 0%, rgba(161,198,234,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4464ad",endColorstr="#a1c6ea",GradientType=1);
+#background-inside {
+    background: #343330;
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +92,7 @@ h2 {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr auto auto auto;
     align-content: center;
-    color:  #343330;
+    color:   #FCD0A1;
     font-weight: 400;
     font-size: 1.3em;
 }
@@ -100,21 +110,62 @@ h2 {
     max-width: 100%;
     height: auto;
 }
-
-.project-image {
-    -webkit-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    -moz-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.35);
-    min-height: 80vh;
-    width: 100vw;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .parallax::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .parallax::-webkit-scrollbar-track {
+    background:  #343330;      
+  }
+  
+  .parallax::-webkit-scrollbar-thumb {
+    background-color: #A1C6EA; 
+    border-radius: 1px;      
+    border: 5px solid  #4464AD;  
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+  .parallax__layer--fore{
+    transform: translateZ(1) scale(2);
+  }
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
+#anna-beauty {
+    background-image: url("./images/anna-beauty.PNG");
 }
+#background-generator {
+    background-image: url("./images/background-generator.PNG");
+}
+#robofriends {
+    background-image: url("./images/robofriends.PNG");
+}
+#placeholder-project {
+    background-image: url("./images/placeholder-projects.png");
+}
+
 .project-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
@@ -157,15 +208,7 @@ h2 {
 	position:relative;
 	top:1px;
 }
-#anna-beauty {
-    background-image: url("./images/anna-beauty.PNG");
-}
-#background-generator {
-    background-image: url("./images/background-generator.PNG");
-}
-#robofriends {
-    background-image: url("./images/robofriends.PNG");
-}
+
 #contact {
     color: #FCD0A1;
     height: 70vh;
@@ -174,6 +217,7 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     margin-top: -50px;
+    z-index:-5;
 }
 .contact-inside {
     padding-right: 5vw;
@@ -190,13 +234,13 @@ h2 {
 }
 
 footer {
-    margin-top: 50px;
+    margin-bottom: -200px;
     width: 100%;
     text-align: center;
 }
 a {
     text-decoration: none;
-    color: #343330;
+    color:  #FCD0A1;
 }
 span {
     text-align: center;

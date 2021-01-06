@@ -1,7 +1,6 @@
 
 let titles = document.querySelectorAll('.title')
 let buttons = document.querySelectorAll('button')
-let ps = document.querySelectorAll('p')
 observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
@@ -11,7 +10,7 @@ observer = new IntersectionObserver(entries => {
   });
 }), {threshold:0};
 
-let array = [titles, buttons, ps]
+let array = [titles, buttons]
 
 array.forEach (arr => {
   arr.forEach(el => {

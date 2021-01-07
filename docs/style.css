@@ -39,7 +39,6 @@ body::-webkit-scrollbar {
   }
 
 #header-container {
-    margin-bottom: 100px;
     height: 100px;
     display: grid;
     width: 100%;
@@ -74,18 +73,12 @@ h2 {
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
-#header-wave {
-    grid-row: 1/2;
-    grid-column: 1/4;
-    z-index: 2;
-}
 #background-inside {
     background: #343330;
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 #about-me {
     display: grid;
@@ -220,7 +213,7 @@ h2 {
     z-index:-5;
 }
 .contact-inside {
-    padding-right: 5vw;
+    padding: 10vw;
     transition: all 0.4s;
 }
 
@@ -234,7 +227,8 @@ h2 {
 }
 
 footer {
-    margin-bottom: -200px;
+    font-size: 1.5em;
+    font-weight: 300;
     width: 100%;
     text-align: center;
 }
